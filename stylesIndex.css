@@ -26,6 +26,10 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
+.headerImgDesktop {
+  display: none;
+}
+
 .contentContainer {
   padding: 2rem 1.5rem;
   background-color: hsl(0, 0%, 100%);
@@ -82,6 +86,7 @@ input {
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 input::placeholder {
@@ -97,46 +102,68 @@ button {
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
-/* subscribe.html styling */
-
-.subscribeContainer {
-  padding: 6rem 1.5rem 2rem 1.5rem;
-  background-color: hsl(0, 0%, 100%);
+button:hover {
+  box-shadow: 1px 10px 20px hsla(13, 100%, 62%, 0.4);
+  background: linear-gradient(120deg, #ff5277, #ff673d);
 }
 
-.successIcon {
-  display: block;
-  margin-bottom: 2rem;
+/* Desktop */
+
+@media (min-width: 1440px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 2rem;
+  }
+
+  .imgContainer {
+    height: 100%;
+    order: 2;
+    border-radius: 0 2rem 2rem 0;
+    padding: 1.5rem 1.5rem 1.5rem 0rem;
+  }
+
+  .contentContainer {
+    height: 641px;
+    width: 500px;
+    order: 1;
+    padding: 5rem 4rem 4rem 4rem;
+    border-radius: 2rem 0 0 2rem;
+  }
+
+  .headerImgMobile {
+    display: none;
+  }
+
+  .headerImgDesktop {
+    display: block;
+  }
+
+  .heading {
+    font-size: 3.5rem;
+  }
 }
 
-.content {
-  font-size: 1rem;
-  font-weight: 400;
-  color: hsl(234, 29%, 20%);
-  margin-bottom: 15rem;
-}
-
-.confirmationEmail {
-  font-weight: 700;
-}
-
-/* subscribe.html styling */
+/* Desktop */
 
 /* Error State */
-/* 
- .legendError {
+
+.legendError {
   display: none;
   font-size: 0.8rem;
   color: hsl(4, 100%, 67%);
   margin-bottom: 0.6rem;
   font-weight: 700;
-  margin-left: 127px;
+  margin-left: 172px;
 }
 
 .errorDisplay {
-  display: none;
   width: 100%;
   padding: 1rem;
   border: 1px solid hsl(4, 100%, 67%);
@@ -144,21 +171,11 @@ button {
   margin-bottom: 1.5rem;
   font-size: 1rem;
   background-color: hsla(4, 100%, 67%, 0.1);
+  color: hsl(4, 100%, 67%);
 }
 
 .errorDisplay::placeholder {
-  display: none;
   color: hsl(4, 100%, 67%);
-} */
+}
 
 /* Error State */
-
-/* Desktop */
-
-@media (min-width: 1440px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-}
