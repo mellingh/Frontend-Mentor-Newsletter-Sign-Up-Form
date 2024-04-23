@@ -89,10 +89,6 @@ input {
   cursor: pointer;
 }
 
-input::placeholder {
-  color: hsla(231, 7%, 60%, 0.9);
-}
-
 button {
   width: 100%;
   padding: 1rem;
@@ -109,6 +105,31 @@ button:hover {
   box-shadow: 1px 10px 20px hsla(13, 100%, 62%, 0.4);
   background: linear-gradient(120deg, #ff5277, #ff673d);
 }
+
+/* Mobile */
+
+/* Error State */
+
+.legendError {
+  display: none;
+  font-size: 0.8rem;
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+  margin-left: 126px;
+}
+
+.errorDisplay {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid hsl(4, 100%, 67%);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  background-color: hsla(4, 100%, 67%, 0.1);
+  color: hsl(4, 100%, 67%);
+}
+
+/* Error State */
 
 /* Desktop */
 
@@ -148,34 +169,22 @@ button:hover {
   .heading {
     font-size: 3.5rem;
   }
+
+  .legendDefault {
+    display: inline;
+    font-size: 0.8rem;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+
+  .legendError {
+    display: none;
+    font-size: 0.8rem;
+    color: hsl(4, 100%, 67%);
+    font-weight: 700;
+    margin-left: 172px;
+  }
 }
 
 /* Desktop */
-
-/* Error State */
-
-.legendError {
-  display: none;
-  font-size: 0.8rem;
-  color: hsl(4, 100%, 67%);
-  margin-bottom: 0.6rem;
-  font-weight: 700;
-  margin-left: 172px;
-}
-
-.errorDisplay {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid hsl(4, 100%, 67%);
-  border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  background-color: hsla(4, 100%, 67%, 0.1);
-  color: hsl(4, 100%, 67%);
-}
-
-.errorDisplay::placeholder {
-  color: hsl(4, 100%, 67%);
-}
-
-/* Error State */
